@@ -10,7 +10,7 @@ var router *gin.Engine
 
 func getAlbums(c *gin.Context) {
 	// c.IndentedJSON(http.StatusOK, albums)
-	c.String(http.StatusOK, "hello worldhhhh")
+	c.String(http.StatusOK, "hello world")
 }
 
 func main() {
@@ -44,6 +44,6 @@ func main() {
 	router.GET("/test", getAlbums)
 
 	// Start serving the application
-	router.Run()
+	router.Run("localhost:8080")
 
 }
