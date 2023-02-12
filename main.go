@@ -8,6 +8,11 @@ import (
 
 var router *gin.Engine
 
+func getAlbums(c *gin.Context) {
+	// c.IndentedJSON(http.StatusOK, albums)
+	c.String(http.StatusOK, "hello worldhhhh")
+}
+
 func main() {
 
 	// Set the router as the default one provided by Gin
@@ -35,6 +40,8 @@ func main() {
 		)
 
 	})
+
+	router.GET("/test", getAlbums)
 
 	// Start serving the application
 	router.Run()
