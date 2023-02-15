@@ -1,5 +1,7 @@
 package main
 
+import "log"
+
 type article struct {
 	ID      int    `json:"id"`
 	Title   string `json:"title"`
@@ -12,5 +14,6 @@ var articleList = []article{
 }
 
 func getAllArticle() []article {
+	log.Println(articleList)
 	return articleList
 }
