@@ -4,14 +4,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	"github.com/lecture/route"
 )
 
 var router *gin.Engine
-
-func getAlbums(c *gin.Context) {
-	// c.IndentedJSON(http.StatusOK, albums)
-	c.String(http.StatusOK, "hello world")
-}
 
 func main() {
 
@@ -41,7 +38,7 @@ func main() {
 
 	})
 
-	router.GET("/test", getAlbums)
+	router.GET("/test", route.Test)
 
 	// Start serving the application
 	router.Run("localhost:8080")
