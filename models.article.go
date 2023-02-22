@@ -15,7 +15,8 @@ var articleList = []article{
 	article{ID: 2, Title: "Article 2", Content: "Article 2 body"},
 }
 
-func getAllArticle() []article {
+// articles list로 return
+func getAllArticles() []article {
 	log.Println(articleList)
 	return articleList
 }
